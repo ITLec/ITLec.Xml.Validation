@@ -14,5 +14,5 @@ RegEx Examples:-
 - ITLec:XPath(//*[local-name()='BillerId'])
 - ITLec:SQLValidation(SELECT CASE WHEN (SELECT COUNT(*) FROM EntityData WHERE EntityXml.exist('(//*:BillerId[text()="{ITLec:XPath(//*[local-name()='BillerId'])}"])') = 1)>=1 THEN 'True' ELSE 'False' END AS IsValid) 
 
-- SELECT CASE WHEN (//*StartOfSelect*//SELECT COUNT(*) FROM EntityData  WHERE EntityName='Biller' AND FirstFieldValue='701'//*EndOfSelect*//)>=1 THEN 'True' ELSE 'False' END AS IsValid
+- SELECT CASE WHEN (/**StartOfSelect**/SELECT COUNT(*) FROM EntityData  WHERE EntityName='Biller' AND FirstFieldValue='701'/**EndOfSelect**/)>=1 THEN 'True' ELSE 'False' END AS IsValid
 
